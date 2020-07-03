@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+   
+    <meta charset="utf-8">
+    <title>Como formatar campos do Formulário / Máscara - jQuery Mask</title>
+    <meta name="description" content="Aprenda a formatar máscaras de forma muito simples e rápida usando a biblioteca jQuery Mask">
+    <meta name="author" content="Prof. Anderson Luiz de Oliveira - https://www.blogson.com.br/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+a:link
+{
+text-decoration:none;
+}
+body{
+    
+    margin:auto;
+    background-image: url(fudopano.jpg);
+    
+    
+}
+#TopMenu{
+   display:flex;
+   background-color:oldlace ;
+   margin:0;
+   
+}
+#TopMenu li {
+    color:black;
+     text-decoration: none;
+     display:block;
+     padding:20px;
+
+}
+
+#TopMenu li:first-child{
+    margin-right: auto;
+    
+    
+}
+a{
+    
+    
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color:black;
+    
+    
+   
+    
+}
+a:hover{
+    color: red;
+}
+.borda{
+    border-radius: 3px;
+}
+
+.section1{
+    display:flex;
+    height: 100vh;
+ background-image:url(Rosas.jpg);
+ background-size: 100%;
+ background-repeat:no-repeat;
+
+}
+.centralize{
+    
+    text-align: center;
+    
+
+}
+.section2{
+    display:flex;
+    background-color: ghostwhite;
+    width: 33vh;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+#botao{ text-align: center }
+.botaoEnviar{
+    
+    text-align: center;
+    padding: 15px 20px;
+    
+    border-radius: 6px;
+
+    font-size: 18px;
+}
+.botaoEnviar:hover{
+    background-color:slategrey;
+}
+#colunas{ text-align: center }
+.colunas{
+    
+    text-align: center;
+}
+ 
+
+</style>
+
+<body >
+
+    <ul id="TopMenu">
+
+        <li><a href="home.html">VOLTAR</a></li>
+          
+    </ul>
+<form>
+    <div  class="container" >
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label>Nome Completo</label>
+        
+                <input type="text" class="form-control" placeholder="Nome">
+            </div>
+            
+
+        
+            
+        </div>
+        <div class="form-row">
+        
+           
+            <div class="form-group col-md-4" >
+                <label>Telefone</label>
+                <input type="text" class="form-control" onkeypress="$(this).mask('(00) 0000-00009')" placeholder="Telefone" required="" class="form-control">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label>CPF</label>
+                <input type="text" class="form-control" onkeypress="$(this).mask('000.000.000-00');" placeholder="CPF" required="" class="form-control">
+            </div>
+            
+        </div>
+            
+            <div class="form-row">
+            <div class="form-group col-md-4">
+                <label>CEP</label>
+                <input type="text" class="form-control" onkeypress="$(this).mask('00.000-000')" placeholder="CEP" required="" class="form-control">
+            </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="Email" required="" class="form-control">
+                </div>
+            </div>
+                <div class="form-row" >
+                    <div class="form-group col-md-4">
+                        <label>Endereço</label>
+                        <input type="text"name="mensagem" placeholder="Endereço"  class="form-control">
+                    </div>
+                    </div>
+                    
+                </div>
+                <div class="container">
+                    <input type="submit" name="botao" value="ENVIAR DADOS" class="botaoEnviar" />
+                    <input type="RESET" name="botao1" value="APAGAR CAMPOS" class="botaoEnviar" />
+                 </div>
+            
+               
+                    
+
+
+        
+                        
+        
+    </div>
+</form>
+</body>
+</html>
